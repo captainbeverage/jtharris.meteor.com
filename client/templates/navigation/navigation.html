@@ -1,0 +1,34 @@
+<template name="navigation">
+	<div class="navbar navbar-inverse navbar-static-top">
+	    <div class="container">
+	        <a href="{{pathFor 'home'}}" class="navbar-brand">Code Portfolio</a>
+
+	        <div class="navbar-header">
+	            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	        </div>
+
+
+	        <div class="collapse navbar-collapse navHeaderCollapse">
+	            <ul class="nav navbar-nav navbar-right">
+	                <li class="{{isActiveRoute regex='home'}}"><a href="{{pathFor 'home'}}">About</a></li>
+
+					<li class="dropdown {{isActivePath regex='projects'}}">
+	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+	                    <ul class="dropdown-menu">
+	                        <li><a href="{{pathFor 'webapplications'}}">Web Applications</a></li>
+	                        <li><a href="{{pathFor 'desktopapplications'}}">Desktop Applications</a></li>
+	                    </ul>
+	                </li>
+
+	                <li class="{{isActiveRoute regex='skills'}}"><a href="{{pathFor 'skills'}}">Skills</a></li>
+	                <li class="{{isActiveRoute regex='experience'}}"><a href="{{pathFor 'experience'}}">Experience</a></li>
+	                <li class="{{isActiveRoute regex='contact'}}"><a href="{{pathFor 'contact'}}">Contact</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+</template>
